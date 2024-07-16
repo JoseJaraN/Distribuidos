@@ -6,9 +6,8 @@ from flask_sqlalchemy import SQLAlchemy
 from config import DATABASE_CONNECTION_URI
 from flask_cors import CORS
 from utils.db import db
-from flask_babel import Babel
 app = Flask(__name__)
-babel = Babel(app)
+
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 app.secret_key = 'clavesecreta123'
